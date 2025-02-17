@@ -8,6 +8,7 @@ let userInput = document.getElementById("user-input");
 let resultArea = document.getElementById("result-area");
 let resetButton = document.getElementById("reset-button");
 let chanceArea = document.getElementById("chance-area");
+let userGuess = document.getElementById("user-guess");
 
 // 상태 초기화 및 결과 영역 클래스 제거 함수
 function resetResultArea() {
@@ -81,6 +82,8 @@ function play() {
 
   history.push(userValue);
 
+  userGuess.textContent = `Your Guesses : ${history.join(", ")}`;
+
   // 남은 시도가 0이면서 정답을 맞추지 못한 경우
   if (chances < 1 && userValue !== computerNum) {
     gameOver = true;
@@ -99,6 +102,7 @@ function reset() {
   pickRandomNum();
   chances = 3;
   history = [];
+  userGuess.textContent = "Your Guesses: -";
   gameOver = false;
   playButton.disabled = false;
   updateChanceArea();

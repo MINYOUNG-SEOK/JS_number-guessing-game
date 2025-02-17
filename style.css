@@ -104,6 +104,18 @@ body {
 }
 
 
+#user-guess {
+    font-size: 14px;
+    font-weight: bold;
+    background: white;
+    color: black;
+    padding: 10px;
+    border: 3px solid black;
+    margin: 8px auto;
+    box-shadow: 4px 4px 0 black;
+    width: 100%;
+}
+
 #user-input {
     font-family: 'Press Start 2P', cursive;
     width: 100%;
@@ -114,6 +126,16 @@ body {
     background: white;
     box-shadow: 4px 4px 0 black;
     margin-right: 10px;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 .button-group {
